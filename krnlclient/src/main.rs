@@ -9,6 +9,8 @@ fn main() {
     let syringe = Syringe::for_process(target_process);
     // inject the payload into the target process
     let injected_payload = syringe.inject("krnl.dll").unwrap();
+
+    // syringe.eject(injected_payload).unwrap();
 }
 
 #[cfg(not(windows))]
